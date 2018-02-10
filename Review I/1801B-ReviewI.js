@@ -220,11 +220,6 @@ function cloneObject(anObj) {
 
 var newObj = cloneObject(deepObject);
 
-console.log(Object.entries(newObj));
-
-
-
-
 
 
 
