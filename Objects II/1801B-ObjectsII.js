@@ -2,7 +2,7 @@ const chalk = require('chalk');
 
 console.log(chalk.red('------------------------------'));
 
-const c = args => console.log(args);
+const c = (...args) => console.log(...args);
 
 // Arrays are just objects that promise us an order.
 // We know as computer scientists the way I can find every element in an array is by starting at key 0 -> key length - 1.
