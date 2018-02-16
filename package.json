@@ -9,6 +9,7 @@
   "author": "Eliot Szwajkowski (eliotpszw@gmail.com)",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.17.1",
     "chalk": "^2.3.0",
     "immutable": "^3.8.2"
   }
