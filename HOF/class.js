@@ -118,14 +118,19 @@ function incrementer(aName) {
 
   // When we made this function in here - it was allowed to look at counter.
   // And im sure we glazed over when i spoke about this, but memory management in JS has one key rule: as long as something maintains a reference to it - it stays alive and does not get thrown away.
-  return function() {
-    // This, is a reference to something. Even though the scope of icrementer should be thrown away, this function we returned out of incrementer is looking at counter. So the garbage collector cannot throw counter away.
-    ++counter;
-    console.log(`${aName} is now valued at ${counter}`);
+  return {
+    count: function() {
+      // This, is a reference to something. Even though the scope of icrementer should be thrown away, this function we returned out of incrementer is looking at counter. So the garbage collector cannot throw counter away.
+      ++counter;
+      console.log(`${aName} is now valued at ${counter}`);
+    },
+    view: function() {
+      console.log(counter);
+    }
   }
 }
 
-var firstCounter = incrementer('firstCounter');
+// var firstCounter = incrementer('firstCounter');
 // firstCounter();
 // firstCounter();
 // firstCounter();
@@ -228,31 +233,38 @@ var three = new Number(3);
 
 // We have a new way of dealing with this, and they're called promises.
 
-var ourFirstPromise = new Promise(function(resolve, reject) {
-  // resolve means - we are done with whatever - and it was a success
-  // reject means - we are done with whatever... and or it timed out - and it was a failure.
+// var ourFirstPromise = new Promise(function(resolve, reject) {
+//   // resolve means - we are done with whatever - and it was a success
+//   // reject means - we are done with whatever... and or it timed out - and it was a failure.
 
-  setTimeout(function() {
-    resolve('Success!');
-  }, 3000);
+//   setTimeout(function() {
+//     resolve('Success!');
+//   }, 3000);
 
-  if (Math.random() * 10 > 5) {
-    reject(new Error('Failure to connect!'));
-  }
-});
+//   if (Math.random() * 10 > 5) {
+//     reject(new Error('Failure to connect!'));
+//   }
+// });
 
-ourFirstPromise
-  .then(function(success) {
-    console.log(success);
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
+// ourFirstPromise
+//   .then(function(success) {
+//     console.log(success);
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   })
 
+// console.log(Array.prototype.forEach.toString());
 
+// TLDR: Is that each of the major object types that you use in Javascript come included as a giant object with all their methods attached to them.
 
-
-
+// var array = {
+//   prototype: {
+//     forEach: function() {
+//       this
+//     }
+//   }
+// }
 
 
 
