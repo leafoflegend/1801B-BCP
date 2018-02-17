@@ -374,7 +374,13 @@ Jeffrey.bark();
 // webpack
 // babel
 
-
+// REACTO - System for dealing with interviews.
+// R: Repeat the question back to the interviewer
+// E: Explain what you think the question is
+// A: Ask about edge cases, and any remaining parts of the question you dont understand (they dont want you to try to answer a question if you dont understand the question) - We want to know that youre thinking about edge cases.
+// C: Code
+// T: Talk about your code - Generally you DO NOT WANT TO WRITE YOUR BEST CODE. THIS IS AN OPPORTUNITY FOR YOU TO DISCUSS WITH ANOTHER PROGRAMMER YOURE TRYING TO IMPRESS HOW YOU COULD MAKE YOUR CODE BETTER. Figure out what they like in code. What their opinions about code are.
+// O: If talking goes well - OPTIMIZE. Show them what you got.
 
 
 
