@@ -13,7 +13,7 @@
 
 var ourApp = document.getElementById('app');
 
-// createElemt() -> takes a string representing an elements name and creates an element of that kind.
+// createElement() -> takes a string representing an elements name and creates an element of that kind.
 
 var ourBoard = document.createElement('div');
 
