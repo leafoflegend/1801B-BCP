@@ -117,4 +117,27 @@ function nestingBird (deepArr) {
   }, '');
 }
 
+// c(nestingBird(['r', 'o', ['b', ['i'], 'n']])); // => 'robin'
+
+// Dan Gutt
+
+function nestingBird(outerChars) {
+  var answer = '';
+
+  function innerNestingBird(chars){
+    for(var i = 0; i < chars.length; i++){
+        var currentElem = chars[i];
+        if(Array.isArray(currentElem)){
+            innerNestingBird(currentElem);
+        } else {
+            answer += currentElem
+        }
+    }
+  }
+
+  innerNestingBird(outerChars);
+
+  return answer;
+}
+
 c(nestingBird(['r', 'o', ['b', ['i'], 'n']])); // => 'robin'
